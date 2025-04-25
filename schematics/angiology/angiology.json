@@ -1,0 +1,71 @@
+{
+  "avoidMemoryLeaks" : true,
+  "dialogs" : [ ],
+  "externalAccessItens" : {
+    "ALL_FEATURES" : [ ],
+    "SPOTLIGHT_FEATURES" : [ ]
+  },
+  "featureCode" : 99778,
+  "metadataToFile" : true,
+  "children" : [ {
+    "children" : [ {
+      "children" : [ {
+        "children" : [ {
+          "children" : [ ],
+          "code" : 821570740,
+          "componentType" : "WCPANEL",
+          "customProperties" : {
+            "showDynamicReport" : "N"
+          },
+          "description" : "CPanel",
+          "dictionaryCode" : 821574058,
+          "displayOrder" : 1,
+          "legends" : [ ],
+          "metadataFile" : true,
+          "objectType" : "COMPONENT",
+          "params" : [ ],
+          "parentObjectCode" : 821564303,
+          "properties" : {
+            "autoCreateChild" : false,
+            "editableGrid" : false,
+            "emptyActivation" : false,
+            "multiSelection" : false,
+            "reportConfigVisible" : false,
+            "saveGridColumnOrder" : false,
+            "selectFirstRow" : false,
+            "unificarCountRegistros" : false,
+            "useNewGrid" : true
+          },
+          "reports" : [ ]
+        } ],
+        "code" : 821564303,
+        "description" : "Region 0",
+        "displayOrder" : 1,
+        "metadataFile" : false,
+        "objectType" : "REGION",
+        "parentObjectCode" : 821564302
+      } ],
+      "code" : 821564302,
+      "description" : "Master region",
+      "masterRegionType" : "LAYOUT_A",
+      "metadataFile" : false,
+      "objectType" : "MASTER_REGION",
+      "parentObjectCode" : 821558275
+    } ],
+    "code" : 821558275,
+    "description" : "Panel",
+    "displayOrder" : 1,
+    "expressionCode" : 314879,
+    "expressionDescription" : "Panel",
+    "metadataFile" : false,
+    "objectType" : "PANEL",
+    "panelWidth" : 12,
+    "parentObjectCode" : 678821105
+  } ],
+  "code" : 678821105,
+  "componentType" : "WSCH",
+  "description" : "Schematic 42",
+  "metadataFile" : false,
+  "objectType" : "SCHEMATIC",
+  "parentObjectCode" : 0
+}

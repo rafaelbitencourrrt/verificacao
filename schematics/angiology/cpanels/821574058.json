@@ -1,0 +1,27 @@
+{
+  "columns" : [ {
+    "code" : 821597374,
+    "componente" : "TEXTBOX",
+    "configurableType" : "N",
+    "ieReadOnly" : true,
+    "ieTotalizar" : false,
+    "ieUnidLargura" : "PX",
+    "ieVisible" : true,
+    "inlineComponente" : "ed",
+    "labelColuna" : "Test9999999",
+    "labelExpressionCode" : 1,
+    "layout" : "T",
+    "nmCampoBase" : "NM_USUARIO",
+    "ordem" : 5,
+    "qtLargura" : 200,
+    "sensitive" : false,
+    "tipoColuna" : "VARCHAR2",
+    "tipoTotalizador" : "N",
+    "userCanConfig" : true
+  } ],
+  "configurable" : "N",
+  "description" : "Users",
+  "query" : "select nm_usuario from usuario where rownum <=50",
+  "title" : "Test9999999",
+  "titleExpressionCode" : 1
+}

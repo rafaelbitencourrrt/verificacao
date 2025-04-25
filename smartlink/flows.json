@@ -1,0 +1,94 @@
+[
+    {
+        "id": "3b6907d423523a05",
+        "type": "tab",
+        "label": "SDX - Integation Demo",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "dbPanelCode": ""
+    },
+    {
+        "id": "b395310cdb1137a7",
+        "type": "http in",
+        "z": "3b6907d423523a05",
+        "name": "sdx",
+        "url": "sdxIntegration",
+        "method": "get",
+        "usetls": false,
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 620,
+        "wires": [
+            [
+                "678f07716606cff5"
+            ]
+        ]
+    },
+    {
+        "id": "678f07716606cff5",
+        "type": "sql builder",
+        "z": "3b6907d423523a05",
+        "parameters": [
+            {
+                "variable": "feriado",
+                "value": "payload.FERIADO",
+                "type": "msg"
+            }
+        ],
+        "name": "",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "template": "select * from feriado where upper(DS_MOTIVO_FERIADO) like :feriado",
+        "output": "str",
+        "x": 370,
+        "y": 620,
+        "wires": [
+            [
+                "a9619a012bb8f03a"
+            ]
+        ]
+    },
+    {
+        "id": "a9619a012bb8f03a",
+        "type": "tasy data access",
+        "z": "3b6907d423523a05",
+        "name": "",
+        "x": 590,
+        "y": 620,
+        "wires": [
+            [
+                "b88d86be259d4dad"
+            ]
+        ]
+    },
+    {
+        "id": "b88d86be259d4dad",
+        "type": "json",
+        "z": "3b6907d423523a05",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 790,
+        "y": 620,
+        "wires": [
+            [
+                "95c36d6771b981a2"
+            ]
+        ]
+    },
+    {
+        "id": "95c36d6771b981a2",
+        "type": "http response",
+        "z": "3b6907d423523a05",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 970,
+        "y": 620,
+        "wires": []
+    }
+]

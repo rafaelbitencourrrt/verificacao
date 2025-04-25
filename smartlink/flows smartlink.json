@@ -1,0 +1,176 @@
+[
+    {
+        "id": "5279355610269721",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "69f32ae147a61abf",
+        "type": "inject",
+        "z": "5279355610269721",
+        "name": "http://www.google1.com/",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0,
+        "topic": "10.10.11.109:1521",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b06c0c6644207d3",
+        "type": "spinal-consumer",
+        "z": "5279355610269721",
+        "name": "spinal",
+        "outOfRangeOffset": "earliest",
+        "fromOffset": "latest",
+        "topic": "test",
+        "groupid": "",
+        "connection": {
+            "name": "Consumer57BLR",
+            "host": "10.10.11.57:8091",
+            "guid": null
+        },
+        "broker": "118",
+        "x": 110,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c6bdc12ac0525c08",
+        "type": "database",
+        "z": "5279355610269721",
+        "name": "database",
+        "server": "120",
+        "connection": {
+            "name": "DEV17",
+            "host": "10.10.11.109",
+            "port": 1521,
+            "database": "swcf_dev",
+            "guid": "0387AD60A71CF2BDE06357FEA8C01211"
+        },
+        "x": 180,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d565100d1d490945",
+        "type": "http in",
+        "z": "5279355610269721",
+        "name": "",
+        "url": "google2.com",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 290,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ca5ad26c673a85d5",
+        "type": "http request",
+        "z": "5279355610269721",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.google3.com/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 250,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9fb088fe1fe74be",
+        "type": "BI",
+        "z": "5279355610269721",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "www.google4.com/",
+        "server": "106",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "connection": {
+            "name": "testBI settingVidy",
+            "link": "http://192.168.253.186:8053/#/",
+            "guid": null
+        },
+        "x": 270,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "69c944d5962b9110",
+        "type": "debug",
+        "z": "5279355610269721",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 240,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "a3d760ff2e0d1b3e",
+        "type": "function",
+        "z": "5279355610269721",
+        "name": "function 1",
+        "func": "\nreturn [{    \n    \"link\": \"https://www.google.mil\",\n    \"link\": \"https://www.google.org\",\n    \"link\": \"https://www.google.net\",\n    \"link\": \"https://www.google.coop\",\n    \"https://srv-dck-kosmos.whebdc.com.br:9443/\",\n    \"http://192.168.253.186:8053/\",\n    \"https://192.168.253.186:8053/\"\n}];",
+        "outputs": 1,
+        "noerr": 10,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    }
+]
